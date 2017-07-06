@@ -13459,9 +13459,18 @@ var React = __webpack_require__(5);
 
 var About = function About(props) {
   return React.createElement(
-    'h3',
+    'div',
     null,
-    'About component'
+    React.createElement(
+      'h3',
+      null,
+      'About'
+    ),
+    React.createElement(
+      'p',
+      null,
+      'This is a simple app to check weather using React'
+    )
   );
 };
 module.exports = About;
