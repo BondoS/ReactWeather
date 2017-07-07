@@ -14400,17 +14400,26 @@ var React = __webpack_require__(6);
 
 var About = function About(props) {
   return React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-      'h3',
+      "h3",
       null,
-      'About'
+      "About"
     ),
     React.createElement(
-      'p',
+      "p",
       null,
-      'This is a simple app to check weather using React'
+      "This is a simple app to check weather using React"
+    ),
+    React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "a",
+        { href: "https://www.linkedin.com/in/abdoserag90/", target: "_blank" },
+        "My linkedin"
+      )
     )
   );
 };
@@ -14460,11 +14469,14 @@ var Main = function Main(props) {
     null,
     React.createElement(Nav, null),
     React.createElement(
-      'h2',
-      null,
-      'Main component'
-    ),
-    props.children
+      'div',
+      { className: 'row' },
+      React.createElement(
+        'div',
+        { className: 'columns medium-6 large-4 small-centered' },
+        props.children
+      )
+    )
   );
 };
 
