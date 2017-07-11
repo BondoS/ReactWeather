@@ -14398,19 +14398,80 @@ module.exports = {
 
 var React = __webpack_require__(6);
 
-var About = function About(props) {
+var About = function About() {
   return React.createElement(
     "div",
     null,
     React.createElement(
-      "h3",
-      null,
+      "h2",
+      { className: "page-title text-center" },
       "About"
     ),
     React.createElement(
       "p",
       null,
-      "This is a simple app to check weather using React"
+      "This is a simple weather application you can build if you follow Andrew Mead's ",
+      React.createElement(
+        "em",
+        null,
+        "The Complete React Web App Developer Course"
+      ),
+      " on",
+      React.createElement(
+        "a",
+        {
+          href: "https://www.udemy.com/the-complete-react-web-app-developer-course",
+          target: "_blank",
+          rel: "noreferrer noopener"
+        },
+        " Udemy"
+      ),
+      "."
+    ),
+    React.createElement(
+      "p",
+      null,
+      "Here are some of the tools we used:"
+    ),
+    React.createElement(
+      "ul",
+      null,
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "https://facebook.github.io/react/", target: "_blank", rel: "noreferrer noopener" },
+          "React"
+        ),
+        " ",
+        React.createElement("br", null),
+        "The JavaScript framework"
+      ),
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "http://openweathermap.org/", target: "_blank", rel: "noreferrer noopener" },
+          "OpenWeatherMap"
+        ),
+        " ",
+        React.createElement("br", null),
+        "The weather API to search for data by city name"
+      ),
+      React.createElement(
+        "li",
+        null,
+        React.createElement(
+          "a",
+          { href: "http://foundation.zurb.com/", target: "_blank", rel: "noreferrer noopener" },
+          "Foundation"
+        ),
+        " ",
+        React.createElement("br", null),
+        "The front-end framework"
+      )
     ),
     React.createElement(
       "div",
@@ -14423,6 +14484,7 @@ var About = function About(props) {
     )
   );
 };
+
 module.exports = About;
 
 /***/ }),
@@ -14434,19 +14496,44 @@ module.exports = About;
 
 var React = __webpack_require__(6);
 
+var _require = __webpack_require__(111),
+    Link = _require.Link;
+
 var Examples = function Examples(props) {
   return React.createElement(
     'div',
     null,
     React.createElement(
-      'h3',
-      null,
+      'h1',
+      { className: 'text-center' },
       'Examples'
     ),
     React.createElement(
       'p',
       null,
-      'Welcome to examples page'
+      'Here are a few Examples locations to try out:'
+    ),
+    React.createElement(
+      'ul',
+      null,
+      React.createElement(
+        'li',
+        null,
+        React.createElement(
+          Link,
+          { to: '/?location=Cairo' },
+          'Cairo, EG'
+        )
+      ),
+      React.createElement(
+        'li',
+        null,
+        React.createElement(
+          Link,
+          { to: '/?location=Rio' },
+          'Rio, Brazil'
+        )
+      )
     )
   );
 };
@@ -14470,7 +14557,7 @@ var Main = function Main(props) {
     React.createElement(Nav, null),
     React.createElement(
       'div',
-      { className: 'row' },
+      { className: 'grid-x' },
       React.createElement(
         'div',
         { className: 'columns medium-6 large-4 small-centered' },
